@@ -1,20 +1,53 @@
 import React, { Component } from "react";
 import "./styles.css";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { BrowserRouter as Router, Link, NavLink } from "react-router-dom";
 import Route from "react-router-dom/Route";
 
 class App extends Component {
+  state = {
+    Clicked: "Home"
+  };
   render() {
     return (
       <Router>
         <div className="App">
-          <div className="link">
+          <div>
             <ul>
               <li>
-                <Link to="/">Home</Link>
+                <NavLink
+                  to="/"
+                  exact
+                  activeStyle={{ backgroundColor: "#db7093" }}
+                >
+                  Home
+                </NavLink>
               </li>
               <li>
-                <Link to="/projects">Project</Link>
+                <NavLink
+                  to="/projects"
+                  exact
+                  activeStyle={{ backgroundColor: "#db7093" }}
+                >
+                  Project
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/services"
+                  exact
+                  activeStyle={{ backgroundColor: "#db7093" }}
+                >
+                  Services
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/contact"
+                  exact
+                  activeStyle={{ backgroundColor: "#db7093" }}
+                >
+                  Contact
+                </NavLink>
               </li>
             </ul>
           </div>
@@ -33,6 +66,23 @@ class App extends Component {
             strict
             render={() => {
               return <h1>You Chose Project</h1>;
+            }}
+          />
+          <Route
+            path="/services"
+            exact
+            strict
+            render={() => {
+              return <h1>You Chose Services</h1>;
+            }}
+          />
+
+          <Route
+            path="/contact"
+            exact
+            strict
+            render={() => {
+              return <h1>You Chose Contact</h1>;
             }}
           />
         </div>
