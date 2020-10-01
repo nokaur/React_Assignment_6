@@ -56,7 +56,22 @@ class App extends Component {
             exact
             strict
             render={() => {
-              return <h1>You Chose Home</h1>;
+              return (
+                <p>
+                  You Chose{" "}
+                  <p
+                    style={{
+                      backgroundColor: "#0FABD2",
+                      width: "50px",
+                      marginTop: "-19px",
+                      marginLeft: "227px"
+                    }}
+                  >
+                    {" "}
+                    Home
+                  </p>
+                </p>
+              );
             }}
           />
 
@@ -65,7 +80,22 @@ class App extends Component {
             exact
             strict
             render={() => {
-              return <h1>You Chose Project</h1>;
+              return (
+                <p>
+                  You Chose{" "}
+                  <p
+                    style={{
+                      backgroundColor: "#0FABD2",
+                      width: "50px",
+                      marginTop: "-19px",
+                      marginLeft: "227px"
+                    }}
+                  >
+                    {" "}
+                    Project
+                  </p>
+                </p>
+              );
             }}
           />
           <Route
@@ -73,7 +103,22 @@ class App extends Component {
             exact
             strict
             render={() => {
-              return <h1>You Chose Services</h1>;
+              return (
+                <p>
+                  You Chose{" "}
+                  <p
+                    style={{
+                      backgroundColor: "#0FABD2",
+                      width: "60px",
+                      marginTop: "-19px",
+                      marginLeft: "227px"
+                    }}
+                  >
+                    {" "}
+                    Services
+                  </p>
+                </p>
+              );
             }}
           />
 
@@ -82,7 +127,22 @@ class App extends Component {
             exact
             strict
             render={() => {
-              return <h1>You Chose Contact</h1>;
+              return (
+                <p>
+                  You Chose{" "}
+                  <p
+                    style={{
+                      backgroundColor: "#0FABD2",
+                      width: "60px",
+                      marginTop: "-19px",
+                      marginLeft: "227px"
+                    }}
+                  >
+                    {" "}
+                    Contact
+                  </p>
+                </p>
+              );
             }}
           />
         </div>
